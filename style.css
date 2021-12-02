@@ -1,0 +1,261 @@
+body {
+    background-image: url("assets/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
+}
+
+#start {
+    background-image: url("assets/start.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 48px;
+    transition: background-color 90ms;
+}
+
+#start:hover {
+    background-color: #4f4f4f;
+}
+
+#calcIcon {
+    background-image: url("assets/calc.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 48px;
+    transition: background-color 90ms;
+}
+
+#calcIcon:hover {
+    background-color: #4f4f4f;
+}
+
+#taskbar {
+    position: absolute;
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    height: 40px;
+    width: 100%;
+    top: calc(100% - 40px);
+    background-color: black;
+}
+
+#search {
+    width: 344px;
+    background-color: #333333;
+    background-image: url("assets/search.png");
+    background-repeat: no-repeat;
+    background-position: 12px;
+    outline: none;
+    border: none;
+    box-shadow: inset 0px 0px 0px 1px rgba(92, 92, 92, 1);
+    border-radius: 0;
+    font-size: 16px;
+    padding-left: 39px;
+}
+
+#search::placeholder {
+    color: white;
+}
+
+#search:hover {
+    box-shadow: inset 0px 0px 0px 2px rgba(119, 119, 119, 1);
+}
+
+#search:focus {
+    box-shadow: inset 0px 0px 0px 2px rgba(41, 186, 204, 1);
+    background-color: white;
+    background-image: url("assets/fsearch.png");
+}
+
+#search:focus::placeholder {
+    color: black;
+}
+
+#calc {
+    position: absolute;
+    cursor: default;
+    background: rgba(34, 34, 34, 0.9);
+    color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    display: none;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 250ms, opacity 250ms;
+    height: 380px;
+    min-width: 300px;
+    min-height: 363px;
+}
+
+#calcheader {
+    display: flex;
+    font-size: 14px;
+}
+
+#headertext {
+    flex-grow: 1;
+    padding: 8px 8px 8px 8px;
+    user-select: none;
+}
+
+#minimize {
+    background-image: url("assets/minimize.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 46px;
+}
+
+#maximize {
+    background-image: url("assets/maximize.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 46px;
+}
+
+#close {
+    background-image: url("assets/close.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 46px;
+}
+
+#close:hover {
+    background-color: #E81123;
+}
+
+#minimize:hover,
+#maximize:hover {
+    background-color: #4C4C4C;
+}
+
+#calcContent {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 21px 70px repeat(5, 1fr);
+    grid-gap: 3px;
+    height: calc(100% - 35px);
+}
+
+#calcDisplay {
+    grid-column: span 4;
+    text-align: right;
+    font-size: 42px;
+    cursor: text;
+}
+
+.calcButtonGrey,
+.calcButtonBlack,
+.calcButtonCyan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+}
+
+.calcButtonGrey {
+    background: rgba(58, 58, 58, 0.8);
+}
+
+.calcButtonGrey:hover,
+.calcButtonBlack:hover {
+    background: rgba(121, 121, 121, 0.8);
+}
+
+.calcButtonBlack {
+    background: rgba(14, 14, 14, 0.8);
+}
+
+.calcButtonCyan {
+    background: rgba(35, 93, 100, 0.8);
+}
+
+.calcButtonCyan:hover {
+    background: rgba(114, 215, 226, 0.8);
+}
+
+#calcUpperDisplay {
+    grid-column: span 4;
+    color: #adadad;
+    text-align: right;
+    margin-right: 5px;
+    height: 21px;
+}
+
+.top {
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    width: 100%;
+    height: 8px;
+    cursor: ns-resize;
+}
+
+.right {
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    width: 8px;
+    height: 100%;
+    cursor: ew-resize;
+}
+
+.bottom {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    height: 8px;
+    cursor: ns-resize;
+}
+
+.left {
+    position: absolute;
+    top: 0px;
+    left: -8px;
+    width: 8px;
+    height: 100%;
+    cursor: ew-resize;
+}
+
+.brResize {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 8px;
+    height: 8px;
+    cursor: nwse-resize;
+}
+
+.tlResize {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 8px;
+    height: 8px;
+    cursor: nwse-resize;
+}
+
+.trResize {
+    position: absolute;
+    top: -8px;
+    left: 100%;
+    width: 8px;
+    height: 8px;
+    cursor: nesw-resize;
+}
+
+.blResize {
+    position: absolute;
+    top: 100%;
+    left: -8px;
+    width: 8px;
+    height: 8px;
+    cursor: nesw-resize;
+}
+
+#desktop {
+    overflow: hidden;
+}

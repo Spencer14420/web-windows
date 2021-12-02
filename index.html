@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Web Windows</title>
+</head>
+
+<body>
+    <div id="taskbar" draggable="false">
+        <div id="start" draggable="false"></div>
+        <input type="text" id="search" placeholder="Type here to search" draggable="false">
+        <div class="icon" id="calcIcon" draggable="false"></div>
+    </div>
+    <div id="desktop" draggable="false">
+        <div id="calc" draggable="false">
+            <div class="windowHeader" id="calcheader" draggable="false">
+                <span id="headertext" draggable="false">Calculator</span>
+                <span class="minimize" id="minimize" draggable="false"></span>
+                <span class="maximize" id="maximize" draggable="false"></span>
+                <span class="close" id="close" draggable="false"></span>
+            </div>
+            <div class="top" draggable="false"></div>
+            <div class="right" draggable="false"></div>
+            <div class="bottom" draggable="false"></div>
+            <div class="left" draggable="false"></div>
+            <div class="brResize" draggable="false"></div>
+            <div class="tlResize" draggable="false"></div>
+            <div class="trResize" draggable="false"></div>
+            <div class="blResize" draggable="false"></div>
+            <div id="calcContent" draggable="false">
+                <div id="calcUpperDisplay" draggable="false"></div>
+                <div id="calcDisplay" draggable="false">0</div>
+                <div class="calcButtonGrey" draggable="false">C</div>
+                <div class="calcButtonGrey" draggable="false"></div>
+                <div class="calcButtonGrey" draggable="false"></div>
+                <div class="calcButtonGrey" draggable="false">/</div>
+                <div class="calcButtonBlack" draggable="false">7</div>
+                <div class="calcButtonBlack" draggable="false">8</div>
+                <div class="calcButtonBlack" draggable="false">9</div>
+                <div class="calcButtonGrey" draggable="false">X</div>
+                <div class="calcButtonBlack" draggable="false">4</div>
+                <div class="calcButtonBlack" draggable="false">5</div>
+                <div class="calcButtonBlack" draggable="false">6</div>
+                <div class="calcButtonGrey" draggable="false">-</div>
+                <div class="calcButtonBlack" draggable="false">1</div>
+                <div class="calcButtonBlack" draggable="false">2</div>
+                <div class="calcButtonBlack" draggable="false">3</div>
+                <div class="calcButtonGrey" draggable="false">+</div>
+                <div class="calcButtonBlack" draggable="false"></div>
+                <div class="calcButtonBlack" draggable="false">0</div>
+                <div class="calcButtonBlack" draggable="false">.</div>
+                <div class="calcButtonCyan" draggable="false">=</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
